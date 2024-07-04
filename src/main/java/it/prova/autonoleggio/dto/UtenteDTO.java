@@ -42,6 +42,9 @@ public class UtenteDTO {
 
 	@NotBlank(message = "{cognome.notblank}")
 	private String cognome;
+	
+	@NotNull(message = "{attivo.notblank}")
+	private Boolean attivo;
 
 	@NotNull(message = "{dataConseguimentoPatente.notnull}")
 	private LocalDate dataConseguimentoPatente;

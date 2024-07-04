@@ -12,8 +12,8 @@ import it.prova.autonoleggio.dto.PrenotazioneDTO;
 import it.prova.autonoleggio.model.Prenotazione;
 import it.prova.autonoleggio.repository.PrenotazioneRepository;
 
-@Transactional
 @Service
+@Transactional
 public class PrenotazioneService {
     // Iniettato automaticamente da Spring per interagire con il repository Prenotazione
     @Autowired

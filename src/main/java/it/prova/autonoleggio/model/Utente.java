@@ -48,6 +48,9 @@ public class Utente {
 	@Column(name = "nome")
 	private String nome;
 
+	@Column(name = "attivo")
+	private Boolean attivo;
+	
 	@NotEmpty
 	@Column(name = "cognome")
 	private String cognome;

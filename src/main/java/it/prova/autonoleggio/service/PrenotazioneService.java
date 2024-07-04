@@ -1,15 +1,18 @@
 package it.prova.autonoleggio.service;
 
-import it.prova.autonoleggio.dto.PrenotazioneDTO;
-import it.prova.autonoleggio.model.Prenotazione;
-import it.prova.autonoleggio.repository.PrenotazioneRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import it.prova.autonoleggio.dto.PrenotazioneDTO;
+import it.prova.autonoleggio.model.Prenotazione;
+import it.prova.autonoleggio.repository.PrenotazioneRepository;
+
+@Transactional
 @Service
 public class PrenotazioneService {
     // Iniettato automaticamente da Spring per interagire con il repository Prenotazione

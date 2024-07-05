@@ -26,7 +26,7 @@ public class JWTUtil {
     private UtenteRepository utenteRepository;
 
     // Segreto per la firma dei token JWT, iniettato dal file di configurazione
-    @Value("${jwt.secret}")
+    @Value("${jwt_secret}")
     private String secret;
 
     // Durata di validità del token JWT, iniettata dal file di configurazione

@@ -65,6 +65,19 @@ public class UtenteDTO {
 	    this.dataConseguimentoPatente = dataConseguimentoPatente;
 	    this.creditoDisponibile = creditoDisponibile;
 	}
+	
+	public UtenteDTO(Long id, String username, String password, String confermaPassword, String email, String nome, String cognome,
+			LocalDate dataConseguimentoPatente, Float creditoDisponibile) {
+		this.id = id;
+		this.username = username;
+		this.password = password; 
+		this.confermaPassword = confermaPassword; 
+		this.email = email;
+		this.nome = nome;
+		this.cognome = cognome;
+	    this.dataConseguimentoPatente = dataConseguimentoPatente;
+	    this.creditoDisponibile = creditoDisponibile;
+	}
 	// Costruisce un oggetto Utente dal DTO corrente
 	// Se includeIdRoles è true, include i ruoli associati
 	public Utente buildUtenteModel(boolean includeIdRoles) {
@@ -82,7 +95,8 @@ public class UtenteDTO {
 	}
 	// Costruisce un DTO Utente dall'oggetto Utente fornito
 	public static UtenteDTO buildUtenteDTOFromModel(Utente utenteModel) {
-		UtenteDTO result = new UtenteDTO(utenteModel.getId(), utenteModel.getUsername(), utenteModel.getEmail(),
+		UtenteDTO result = new UtenteDTO(utenteModel.getId(), utenteModel.getUsername(),
+				utenteModel.getPassword(), utenteModel.getConfermaPassword(), utenteModel.getEmail(),
 				utenteModel.getNome(), utenteModel.getCognome(), utenteModel.getDataConseguimentoPatente(),
 				utenteModel.getCreditoDisponibile());
 		if (utenteModel.getRuoli() != null) {

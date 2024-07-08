@@ -38,4 +38,12 @@ public class RuoloDTO {
 			return RuoloDTO.buildRuoloDTOFromModel(ruoloEntity);
 		}).collect(Collectors.toList());
 	}
+	
+	public RuoloDTO(Long id) {
+		this.id = id; 
+	}
+	
+	public RuoloDTO(String codice) {
+		this.codice = codice; 
+	}
 }

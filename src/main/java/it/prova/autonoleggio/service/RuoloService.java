@@ -51,7 +51,7 @@ public class RuoloService {
         ruoloRepository.deleteById(idToRemove);
     }
     // Trova un ruolo dato il suo codice e restituisce il DTO del ruolo trovato
-    public RuoloDTO cercaPerCodice(String codice) {
-        return RuoloDTO.buildRuoloDTOFromModel(ruoloRepository.findByCodice(codice));
+    public Ruolo cercaPerCodice(String codice) {
+        return ruoloRepository.findByCodice(codice);
     }
 }

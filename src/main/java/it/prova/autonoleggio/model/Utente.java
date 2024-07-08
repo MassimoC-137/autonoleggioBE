@@ -59,7 +59,7 @@ public class Utente {
 	@Column(name = "data_conseguimento_patente")
 	private LocalDate dataConseguimentoPatente;
 
-	@Positive
+
 	@Column(name = "credito_disponibile")
 	private Float creditoDisponibile;
 

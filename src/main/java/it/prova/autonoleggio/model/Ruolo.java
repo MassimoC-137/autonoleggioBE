@@ -28,4 +28,12 @@ public class Ruolo {
 	private Long id;
 	@Column(name = "codice")
 	private String codice;
+	
+	public Ruolo(Long id) {
+		this.id = id; 
+	}
+	
+	public Ruolo(String codice) {
+		this.codice = codice; 
+	}
 }
